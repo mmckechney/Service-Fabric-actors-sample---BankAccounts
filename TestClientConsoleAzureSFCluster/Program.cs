@@ -22,7 +22,8 @@
 
         static async Task RunAsync()
         {
-            client.BaseAddress = new Uri("http://sfjota.westeurope.cloudapp.azure.com:5001/");
+            //client.BaseAddress = new Uri("http://sfjota.westeurope.cloudapp.azure.com:5001/");
+            client.BaseAddress = new Uri("http://localhost:8389/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -59,7 +60,7 @@
             // show effects of standing orders
             do
             {
-                totalBalance = 0;
+                 totalBalance = 0;
 
                 Console.Clear();
                 foreach (string accountId in accountsCreated)
